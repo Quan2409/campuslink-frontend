@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E.S.A701</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <header class="header">
+          <h1 class="text-center">FA Survey Form</h1>
+          <p class="description text-center">
+            Thank you for taking the time to help us improve the platform
+          </p>
+        </header>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age <span>(optional)</span> </label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            class="form-control"
+            placeholder="Age"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="role"
+            >Whick option best describes your curent role>?
+          </label>
+          <select name="role" id="role" class="form-control">
+            <option value="0">Select curent role</option>
+            <option value="1">Adminstrator</option>
+            <option value="2">User</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Would you recommened FA to a friend? </label>
+
+          <div class="box">
+            <label for="option_01">
+              <input
+                type="radio"
+                id="option_01"
+                name="status"
+                value="Definitely"
+              />
+              Definitely
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_02">
+              <input type="radio" id="option_02" name="status" value="Maybe" />
+              Maybe
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_03">
+              <input
+                type="radio"
+                id="option_03"
+                name="status"
+                value="Not Sure"
+              />
+              Not Sure
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label
+            >What would you like to see improved?
+            <span>Check all that apply</span>
+          </label>
+
+          <div class="box">
+            <label for="option_01">
+              <input
+                type="checkbox"
+                id="option_01"
+                value="Front-end Projects"
+              />
+              Front-end Projects
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_02">
+              <input type="checkbox" id="option_02" value="Back-end Projects" />
+              Back-end Projects
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_03">
+              <input type="checkbox" id="option_03" value="AI" />
+              AI
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_04">
+              <input type="checkbox" id="option_04" value="Machine Learning" />
+              Machine Learning
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_05">
+              <input type="checkbox" id="option_05" value="Soft Skills" />
+              Soft Skills
+            </label>
+          </div>
+
+          <div class="box">
+            <label for="option_05">
+              <input
+                type="checkbox"
+                id="option_06"
+                value="Presentation Skills"
+              />
+              Presentation Skills
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Any comments or suggestions? </label>
+          <textarea
+            name="comment"
+            id="comment"
+            rows="4"
+            cols="75"
+            placeholder="Enter yout comment here..."
+          ></textarea>
+        </div>
+        <button class="submit-button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

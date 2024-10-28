@@ -1,0 +1,517 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* variables */
+@import "./variable.css";
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.unsupport {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+}
+
+.main__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main__content {
+  position: absolute;
+  top: 300px;
+  left: 15px;
+  border-radius: 5px;
+  padding: 15px;
+  width: 400px;
+  color: var(--white-opaque);
+  background-color: var(--black-semi-transpe);
+}
+
+.main__content-heading {
+  display: block;
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.main__content-subheading {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.main__content-btn {
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--green);
+}
+
+.main__content-btn a {
+  color: var(--white);
+  padding-right: 5px;
+}
+
+.main__cta {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--black);
+}
+
+.main__cta a {
+  color: var(--white);
+}
+
+.app,
+.clarity {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.clarity {
+  padding: 40px 10px;
+  background-color: rgb(236, 240, 241);
+}
+
+.app__content,
+.clarity__content {
+  grid-column: span 8;
+}
+
+.app__content-heading,
+.clarity__content-heading {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.app__content-subheading,
+.clarity__content-subheading {
+  margin: 20px 0;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.app__content-subheading {
+  color: var(--green);
+}
+
+.clarity__content-subheading {
+  color: var(--red);
+}
+
+.app__content-desc {
+  width: 700px;
+}
+
+.app__content-desc .highlight,
+.clarity__content-desc .highlight {
+  font-size: 1.5em;
+}
+
+.app__content-btn {
+  margin: 30px 0;
+  padding: 15px;
+  width: 250px;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.app__content-subdesc .android {
+  color: var(--green);
+}
+
+.app__content-subdesc .micro {
+  color: var(--blue);
+}
+
+.app__img,
+.clarity__img {
+  grid-column: span 4;
+}
+
+.app__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.features {
+  background-color: var(--gray);
+}
+
+.feature__content {
+  padding-top: 50px;
+  text-align: center;
+  color: var(--white);
+}
+
+.feature__content-heading {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.feature__content-subheading {
+  font-size: 12px;
+}
+
+.feature__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.feature__item {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.feature__item i {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 3em;
+}
+
+.feature__item span {
+  color: var(--white);
+}
+
+.feature__list .feature__list-01,
+.feature__list .feature__list-02,
+.feature__list .feature__list-03,
+.feature__list .feature__list-04 {
+  grid-column: span 3;
+}
+
+.feature__list-01 .feature__item:nth-child(1) i {
+  color: var(--orange);
+}
+
+.feature__list-01 .feature__item:nth-child(2) i {
+  color: var(--white);
+}
+
+.feature__list-01 .feature__item:nth-child(3) i {
+  color: var(--white);
+}
+
+.feature__list-02 .feature__item:nth-child(1) i {
+  color: var(--red);
+}
+
+.feature__list-02 .feature__item:nth-child(2) i {
+  color: var(--blue);
+}
+
+.feature__list-02 .feature__item:nth-child(3) i {
+  color: var(--orange);
+}
+
+.feature__list-03 .feature__item:nth-child(1) i {
+  color: var(--brown);
+}
+
+.feature__list-03 .feature__item:nth-child(2) i {
+  color: var(--orange);
+}
+
+.feature__list-03 .feature__item:nth-child(3) i {
+  color: var(--gray-v2);
+}
+
+.feature__list-04 .feature__item:nth-child(1) i {
+  color: var(--green);
+}
+
+.feature__list-04 .feature__item:nth-child(2) i {
+  color: var(--blue);
+}
+
+.feature__list-04 .feature__item:nth-child(3) i {
+  color: var(--pink);
+}
+
+.price {
+  padding: 10px;
+}
+
+.price__content {
+  text-align: center;
+}
+
+.price__content-heading {
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+.price__content-subheading {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.price__packs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.packs {
+  grid-column: span 6;
+  margin: 0 auto;
+  border: 1px solid var(--light-gray);
+  width: 500px;
+  text-align: center;
+}
+
+.packs__heading {
+  padding: 20px;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: var(--white);
+}
+
+.packs.basic .packs__heading {
+  background-color: var(--gray);
+}
+
+.packs.premium .packs__heading {
+  background-color: var(--red);
+}
+
+.packs__lists li {
+  border: 1px solid var(--light-gray);
+  padding: 13px;
+  list-style: none;
+}
+
+.packs__lists li:last-child {
+  padding: 20px;
+  font-size: 1.3em;
+}
+
+.packs__lists li span {
+  font-weight: 500;
+}
+
+.packs__btn {
+  padding: 20px;
+  background-color: var(--light-gray);
+}
+
+.packs__btn .button {
+  margin: 0 auto;
+  padding: 10px;
+  width: 150px;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.footer__content-icons i {
+  margin: 0 5px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+.footer__content-icons .fb {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.footer__content-icons .ins {
+  color: var(--white);
+  background: linear-gradient(
+    45deg,
+    #feda77,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+}
+
+.footer__content-icons .snap {
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
+.footer__content-icons .pin {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.footer__content-icons .twit,
+.footer__content-icons .link {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.footer__content-ref {
+  margin-top: 20px;
+}
+
+.footer__content-ref p a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+/* unsupport */
+@media (max-width: 575px) {
+  section {
+    display: none;
+  }
+
+  .unsupport {
+    display: block;
+    margin: 200px auto;
+    width: 400px;
+    text-align: center;
+  }
+}
+
+/* responsive (mobile) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .main__img {
+    width: 100vw;
+    margin-top: 37px;
+  }
+
+  .main__content {
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    width: 100vw;
+    background-color: transparent;
+  }
+
+  .main__content span,
+  .main__content p {
+    display: none;
+  }
+
+  .main__content-btn {
+    border-radius: 0px;
+  }
+
+  .main__content-btn i {
+    color: var(--white);
+  }
+
+  .main__cta {
+    right: 0px;
+    bottom: -35px;
+    border-radius: 0px;
+    width: 100vw;
+  }
+
+  .app {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .app__content,
+  .clarity__content {
+    grid-column: span 12;
+  }
+
+  .app__content {
+    width: 560px;
+  }
+
+  .app__content-heading,
+  .clarity__content-heading {
+    font-size: 4em;
+  }
+
+  .app__content-subheading,
+  .clarity__content-subheading {
+    font-size: 3em;
+  }
+
+  .app__content-desc {
+    line-height: 1.5;
+    width: fit-content;
+  }
+
+  .app__content-subdesc {
+    margin-top: 10px;
+  }
+
+  .app__content-btn {
+    position: absolute;
+    left: 32%;
+    width: 250px;
+    background-color: var(--white);
+  }
+
+  .app__img,
+  .clarity__img {
+    grid-column: span 12;
+    margin: 0px auto;
+  }
+
+  .app__img {
+    margin-top: 30px;
+  }
+
+  .app__img img {
+    width: 355px;
+    height: 471px;
+  }
+
+  .clarity__content-subheading {
+    margin: 0 0;
+  }
+
+  .packs {
+    grid-column: span 12;
+  }
+
+  .feature__list {
+    gap: 10px;
+  }
+}

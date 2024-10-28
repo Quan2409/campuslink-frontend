@@ -1,0 +1,17 @@
+/* variables */
+:root {
+  --black: rgb(0, 0, 0);
+  --black-semi-transpe: rgba(0, 0, 0, 0.5);
+  --white: rgb(255, 255, 255);
+  --white-opaque: rgba(255, 255, 255, 0.8);
+  --orange: rgb(243, 156, 18);
+  --yellow: rgb(244, 208, 63);
+  --brown: rgb(154, 125, 10);
+  --blue: rgb(52, 152, 219);
+  --green: rgb(12, 196, 98);
+  --gray: rgb(81, 90, 90);
+  --gray-v2: rgb(101, 110, 110);
+  --light-gray: rgb(236, 240, 241);
+  --red: rgb(231, 76, 60);
+  --pink: rgb(236, 112, 99);
+}

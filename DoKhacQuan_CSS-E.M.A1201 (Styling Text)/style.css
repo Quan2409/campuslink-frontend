@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+/* fonts */
+@font-face {
+  font-family: heading-font;
+  src: url("./fonts/josefinslab-bold-webfont.ttf");
+}
+
+@font-face {
+  font-family: body-font;
+  src: url("./fonts/Lovato-Light-webfont.ttf");
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: body-font;
+}
+
+h1,
+h2 {
+  font-family: heading-font;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+p:nth-of-type(1),
+p:nth-of-type(3) {
+  text-indent: 20px;
+}
+
+ul li,
+ol li {
+  font-size: 1.5em;
+}
+
+ul li {
+  list-style: square;
+}
+
+ol li {
+  list-style: lower-alpha;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover,
+a:visited,
+a:focus {
+  color: #a66;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active {
+  background-color: #ddd;
+}
+
+section p:nth-of-type(1) a::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-image: url("./assets/icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+nav li {
+  margin: 20px 0;
+  border: 1px solid #a66;
+  padding: 20px;
+  width: 150px;
+  list-style: none;
+  text-align: center;
+}
+
+nav li a {
+  text-decoration: none;
+}

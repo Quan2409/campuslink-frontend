@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E.S.A502 - Problem 02</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      video {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Video embed</h1>
+    <video width="320" height="240" controls muted>
+      <source src="./assets/video.mp4" type="video/mp4" />
+      <source src="./assets/video.webm" type="video/webm" />
+      <track
+        src="./assets/subtitles_en.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="English"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>

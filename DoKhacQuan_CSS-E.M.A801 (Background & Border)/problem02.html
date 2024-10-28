@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E.M.A801</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .box {
+        display: flex;
+        width: 300px;
+        padding: 0.5em;
+        border: 5px solid lightblue;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 40px;
+        text-align: center;
+      }
+
+      h2 {
+        width: 200px;
+      }
+
+      .left {
+        width: 50px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-image: url("./assets/star.png");
+      }
+
+      .right {
+        width: 50px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: top, center, bottom;
+        background-image: url("./assets/star.png"), url("./assets/star.png"),
+          url("./assets/star.png");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2 class="left"></h2>
+      <h2>Backgrounds &amp; Borders</h2>
+      <h2 class="right"></h2>
+    </div>
+  </body>
+</html>
