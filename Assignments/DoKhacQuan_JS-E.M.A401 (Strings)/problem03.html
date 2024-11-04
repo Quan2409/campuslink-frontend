@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-E.M.A401 Problem 03</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let quote = "I dO nOT lIke gREen eGgS anD HAM";
+
+    // Add your code here
+    let fixedQuote =
+      quote.charAt(0).toUpperCase() + quote.slice(1).toLowerCase();
+    fixedQuote = fixedQuote.replace("green eggs and ham", "vegetables");
+    let finalQuote = fixedQuote.concat(".");
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    para1.textContent = fixedQuote;
+    let para2 = document.createElement("p");
+    para2.textContent = finalQuote;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>

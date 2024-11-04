@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-E.M.A301 Probelem 01</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let finalResult;
+    let evenOddResult;
+
+    // Add your code here
+    let firstValue = 2;
+    let secondValue = 2;
+    let thirdValue = 2;
+    let fourValue = 14;
+    finalResult = (firstValue + secondValue) * (fourValue - thirdValue);
+    evenOddResult = finalResult % 2;
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    let finalResultCheck =
+      finalResult === 48 ? `Yes, well done!` : `No, it is ${finalResult}`;
+    para1.textContent = `Is the finalResult 48? ${finalResultCheck}`;
+    let para2 = document.createElement("p");
+    let evenOddResultCheck =
+      evenOddResult === 0
+        ? "The final result is even!"
+        : "The final result is odd. Hrm.";
+    para2.textContent = evenOddResultCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>

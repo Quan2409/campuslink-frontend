@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-E.M.A301 Problem 02</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    // Final result should be 10.42
+    // Add/update your code here
+    let finalResult;
+    let finalNumber;
+
+    let result = 5.21;
+    let result2 = 2;
+
+    result *= result2;
+    finalResult = result.toFixed(2);
+    finalNumber = parseInt(finalResult);
+
+    // Don't edit the code below here!
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    para1.textContent = `Your finalResult is ${finalResult}`;
+    let para2 = document.createElement("p");
+    let finalNumberCheck =
+      isNaN(finalNumber) === false
+        ? "finalNumber is a number type. Well done!"
+        : `Ooops! finalNumber is not a number.`;
+    para2.textContent = finalNumberCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>
