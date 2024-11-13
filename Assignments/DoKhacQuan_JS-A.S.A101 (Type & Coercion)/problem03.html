@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-A.S.A101 Problem 03</title>
+  </head>
+  <body>
+    <!-- Content -->
+  </body>
+  <script>
+    function reverse(str) {
+      if (typeof str !== "string") {
+        console.log("This is not a string, pleas try again");
+        return;
+      } else {
+        let strArray = str.split("_");
+        let pascalCase = "";
+        for (let i = 0; i < strArray.length; i++) {
+          pascalCase +=
+            strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1);
+        }
+        return pascalCase;
+      }
+    }
+    const reverseStr = reverse("user_name");
+    console.log(reverseStr);
+    document.write(reverseStr);
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-A.S.A101 Problem 04</title>
+  </head>
+  <body>
+    <!-- Content -->
+  </body>
+  <script>
+    function productNumberToStr(smallNumber, largeNumber) {
+      if (smallNumber < 1 || smallNumber > 99) {
+        console.log("Small number must be in range from 1 to 99");
+        return;
+      }
+
+      let result = smallNumber * largeNumber;
+      return result.toString();
+    }
+    let test = productNumberToStr(89, 12345678910111213);
+    console.log(typeof test); //result: string
+  </script>
+</html>

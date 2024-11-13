@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS.E.M.A501 Problem 03</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let myArray = [
+      "Ryu",
+      "Ken",
+      "Chun-Li",
+      "Cammy",
+      "Guile",
+      "Sakura",
+      "Sagat",
+      "Juri",
+    ];
+
+    // Add your code here
+    myArray.pop();
+    myArray.push("Zangief");
+    myArray.push("Ibuki");
+    myArray.forEach(function (item, index, array) {
+      array[index] = `${item} (${index})`;
+    });
+    let myString = myArray.join(" - ");
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    para1.textContent = myString;
+
+    section.appendChild(para1);
+  </script>
+</html>

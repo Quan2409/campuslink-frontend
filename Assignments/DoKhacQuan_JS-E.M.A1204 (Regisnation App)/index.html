@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regisnation App</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="register">
+      <h1 class="register__title">Registration Form</h1>
+      <span class="success"></span>
+      <form method="post" class="register__form">
+        <div class="form__group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+          />
+          <span class="error name-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          />
+          <span class="error password-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm"
+            name="confirm"
+            placeholder="Enter confirm password"
+          />
+          <span class="error confirm-error"></span>
+        </div>
+
+        <div class="form__group">
+          <button>Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+  <script src="./script.js"></script>
+</html>

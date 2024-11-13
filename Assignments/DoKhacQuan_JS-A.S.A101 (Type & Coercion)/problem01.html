@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-A.S.A101 Problem 01</title>
+  </head>
+  <body>
+    <!-- Content -->
+    <p>The explanation of Problem 1 is in comment block. Please read it</p>
+  </body>
+  <script>
+    function empty(o) {
+      o = null;
+    }
+    var x = [];
+    empty(x);
+    console.log(x);
+
+    /*
+    Output: [] - an empty array with no element inside.
+    Reason: 
+    - First of all, when declare x = [], the memory allocate the array and
+    x will reference to the address of the memory where array is storaged. If assign x to new variabels
+    such as y, both x and y with reference to the address of memory. 
+    
+    - Second, when declare an empty() with parameter o then call it and assign argrument x. In this moment, 
+    both o and x are referncing to the address. If there are some change of the array from x, example: o.push(1), then 
+    both o and x will change the array. 
+
+    - Third, in the empty(), o is assigned null - meaning o is stopped to references to the array, but this is not affected to x,
+    so when log x, it will return an empty [] as the beginning 
+    */
+  </script>
+</html>

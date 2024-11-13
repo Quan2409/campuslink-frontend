@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(239, 239, 239);
+}
+
+.register {
+  margin: 20px auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+}
+
+.register__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register__form {
+  /*  */
+}
+
+.form__group {
+  margin: 20px auto;
+  width: 300px;
+}
+
+.form__group label {
+  display: block;
+  margin: 5px 0;
+}
+
+.form__group input {
+  padding: 7px;
+  width: 300px;
+}
+
+.form__group button {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: 10px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.success {
+  display: block;
+  color: green;
+  text-align: center;
+}

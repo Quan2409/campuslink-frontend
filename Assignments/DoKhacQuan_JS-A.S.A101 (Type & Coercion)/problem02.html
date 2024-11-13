@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-A.S.A101 Problem 02</title>
+  </head>
+  <body>
+    <!-- Content -->
+    <p>The explanation of Problem 2 is in comment block. Please read it</p>
+  </body>
+  <script>
+    function swap(a = 1, b = 2) {
+      var tmp = a;
+      a = b;
+      b = tmp;
+    }
+
+    var x = 1;
+    var y = 2;
+    swap(x, y);
+    console.log(x);
+
+    /*
+    Output: 1
+    Reason: 
+    - When declare x and y and add it as agrument in swap() equal to 2 parameter a and b. 
+    - The swap() recvies 2 copy value of x and y mean 1 and 2. Inside the swap(), the code show
+    the reveses value of a and b, but it will only happen with 2 local varibles with function scope in swap
+    and 2 copied value of x and y. Outside the fucntion, 2 global variables x and y change nothing, that what
+    is called "passed by value". 
+    - For that reason, when log the x, the result is 1;
+    */
+  </script>
+</html>

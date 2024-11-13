@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS.E.M.A501 Problem 01</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    // Add your code here
+    var myArray = ["crocodiles", "hores", "pigs", "chickens"];
+    myArray[0] = "beef";
+    myArray[1] = "dog";
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    para1.textContent = `Array: ${myArray}`;
+
+    section.appendChild(para1);
+  </script>
+</html>

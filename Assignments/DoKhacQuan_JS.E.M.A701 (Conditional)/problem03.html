@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let response;
+    let score = 75;
+    let machineActive = false;
+
+    // Add your code here
+    if (!machineActive) {
+      response = "The machine is turned off. Turn it in to process your score";
+    } else {
+      switch (machineActive) {
+        case score >= 0 && score <= 19:
+          response = "That was a terrible score - total fail!";
+          break;
+
+        case score >= 20 && score <= 39:
+          response =
+            "You know some things, but its a pretty bad score. Needs improvement";
+          break;
+
+        case score >= 40 && score <= 69:
+          response = "You did a passable job, not bab!";
+          break;
+
+        case score >= 70 && score <= 89:
+          response = "That's a great score, you really know your stuff";
+          break;
+
+        case score >= 90 && score <= 100:
+          response = "What an amazing score ! Dis you cheat? Are you for real?";
+          break;
+
+        default:
+          response = "The score must not over 100, please, try again";
+          break;
+      }
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    let para2 = document.createElement("p");
+
+    para1.textContent = `Your score is ${score}`;
+    para2.textContent = response;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>
