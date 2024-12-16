@@ -1,0 +1,42 @@
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.photo-item {
+  padding-bottom: 20px;
+  width: 300px;
+  border: 1px solid gray;
+}
+
+.photo-item img {
+  width: 100%;
+}
+
+.photo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.photo-content p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-weight: 600;
+}
+
+.load-more button {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100px;
+  color: #fff;
+  background-color: blue;
+}

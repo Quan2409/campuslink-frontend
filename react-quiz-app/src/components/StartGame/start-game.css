@@ -1,0 +1,20 @@
+.start-game {
+  margin-top: 70px;
+}
+
+.start-game__title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white-text);
+}
+
+.btn--start {
+  margin: 20px auto;
+  background-color: var(--start-btn);
+}
+
+.btn--start:hover {
+  color: var(--white-text);
+  background-color: var(--start-btn-hover);
+}

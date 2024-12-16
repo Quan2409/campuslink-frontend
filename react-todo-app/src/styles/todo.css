@@ -1,0 +1,99 @@
+/* font: Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* reset-css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  margin: 50px auto;
+  border: 1px solid #cacfd2;
+  border-radius: 5px;
+  padding: 20px;
+  width: 600px;
+  background-color: #fff;
+}
+
+.todo__content {
+  text-align: center;
+}
+
+.todo__content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.todo__input {
+  margin: 15px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.todo__input input,
+.todo__input button {
+  margin: 0 3px;
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.todo__input input {
+  width: 300px;
+  border: 1px solid #f39c12;
+}
+
+.todo__input button {
+  color: #fff;
+  border: 1px solid #27ae60;
+  background-color: #27ae60;
+  cursor: pointer;
+}
+
+.todo__list {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(247, 220, 11, 0.3);
+}
+
+.todo__filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__filter span {
+  color: #af601a;
+}
+
+.todo__item ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.todo__item ul li button {
+  border: none;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.todo__item ul li button svg {
+  font-size: 1rem;
+  color: #af601a;
+  cursor: pointer;
+}
+
+.todo__item ul li:hover button {
+  visibility: visible;
+}

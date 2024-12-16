@@ -1,0 +1,115 @@
+[
+  {
+    "id": "1",
+    "question_content": "React is mainly used for building ___.",
+    "answers": [
+      {
+        "id": "1",
+        "answer_content": "Database",
+        "correct": false
+      },
+      {
+        "id": "2",
+        "answer_content": "User interface",
+        "correct": true
+      },
+      {
+        "id": "3",
+        "answer_content": "Design Platform",
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "id": "2",
+    "question_content": "The lifecycle methods are mainly used for ___.",
+    "answers": [
+      {
+        "id": "1",
+        "answer_content": "keeping track of event history",
+        "correct": false
+      },
+      {
+        "id": "2",
+        "answer_content": "enhancing components",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "answer_content": "freeing up resources",
+        "correct": false
+      },
+      {
+        "id": "4",
+        "answer_content": "none of the above",
+        "correct": true
+      }
+    ]
+  },
+
+  {
+    "id": "3",
+    "question_content": "___ can be done while multiple elements need to be returned from a component.",
+    "answers": [
+      {
+        "id": "1",
+        "answer_content": "Abstraction",
+        "correct": false
+      },
+      {
+        "id": "2",
+        "answer_content": "Insulation",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "answer_content": "Wrapping",
+        "correct": true
+      }
+    ]
+  },
+
+  {
+    "id": "4",
+    "question_content": "Which is the right way of accessing a function fetch() from an h1 element in JSX?",
+    "answers": [
+      {
+        "id": "1",
+        "answer_content": "<h1>{fetch()}</h1>",
+        "correct": true
+      },
+      {
+        "id": "2",
+        "answer_content": "<h1>${fetch()}</h1>",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "answer_content": "<h1>{fetch}</h1>",
+        "correct": false
+      },
+      {
+        "id": "4",
+        "answer_content": "<h1>${fetch}</h1>",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "question_content": "Which of the following methods in a React Component should be overridden to stop the component from updating?",
+    "answers": [
+      {
+        "id": "1",
+        "answer_content": "willComponentUpdate",
+        "correct": false
+      },
+      {
+        "id": "2",
+        "answer_content": "shouldComponentUpdate",
+        "correct": true
+      }
+    ]
+  }
+]

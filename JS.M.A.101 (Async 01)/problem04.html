@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-M.A.101 Problem 04</title>
+  </head>
+  <body>
+    <!--  -->
+    <script>
+      // Case 01
+      console.log("A");
+      setTimeout(function () {
+        console.log("B");
+      }, 0);
+      setTimeout(function () {
+        console.log("C");
+      }, 0);
+      console.log("D");
+      /*
+      Output Case 1: A D B C
+      Breakdown:
+      Call Stack in the first time of process
+      + Run all synchoronous task
+      + Log value "A" and "D"
+
+      After 0ms, first and second setTimout() put in queue task
+      + Log value "B" and "C"
+
+      Call Stack in the second time of process
+      + All callback in queue is processed
+
+      Final Call Stack
+      A -> D -> B -> C
+      */
+
+      // Case 02
+      setTimeout(function () {
+        setTimeout(function () {
+          console.log("A");
+        }, 0);
+      }, 0);
+
+      setTimeout(function () {
+        console.log("B");
+      }, 0);
+
+      setTimeout(function () {
+        setTimeout(function () {
+          console.log("C");
+        }, 0);
+      }, 10);
+
+      setTimeout(function () {
+        console.log("D");
+      }, 0);
+
+      /*
+      Call Stack Breakdown
+      After 0ms
+      + first setTimeout() put callback contain sub setTimeout() in queue task
+      + second setTimeout() put in queue task and log "B"
+      + four setTimeout() same second setTimout()
+
+      After 10ms
+      + four setTimeout() put callback contain sub setTimeout() in queue task
+
+      Queue Order:
+      + "B" and "D" is not contain another setTimout, so it go first
+      + Callback from first setTimeout put callback log "A" in queue
+      + Callback from four setTimeout put callback log "C" in queue
+
+      Final Call Stack:
+      B -> D -> A -> C
+      */
+
+      // Case 03
+      var x = "A";
+
+      setTimeout(function () {
+        console.log(x);
+        x = "B";
+      }, 3);
+
+      setTimeout(function () {
+        console.log(x);
+        x = "C";
+      }, 2);
+
+      setTimeout(function () {
+        console.log(x);
+        x = "D";
+      }, 1);
+
+      setTimeout(function () {
+        console.log(x);
+      }, 4);
+
+      /*
+      Output: A, D, C, B
+      Event Loop Breakdown:
+
+      After 1ms (third setTimeout())
+      + Callback put in call stack
+      + Log value x is "A",
+      + Assign x = "D"
+
+      Sau 2ms (second setTimeout())
+      + Callback put in call stack
+      + Log value x is "D" (value is override)
+      + Assign x = "C"
+
+      Sau 3ms (third setTimout())
+       + Callback put in call stack
+      + Log value x is "C" (value is override)
+      + Assign x = "B"
+
+      Sau 4ms (four setTimeout())
+      + Callback put in call stack
+      + Log value x is "B" (value is override)
+
+      Final Call Stack:
+      A -> D -> C -> B
+      */
+
+      // Case 4:
+      var t1 = setTimeout(function () {
+        console.log("A");
+        setTimeout(function () {
+          console.log("B");
+        }, 0);
+      }, 100);
+
+      var t2 = setTimeout(function () {
+        console.log("C");
+        setTimeout(function () {
+          console.log("D");
+        }, 0);
+      }, 200);
+
+      clearTimeout(t1);
+
+      setTimeout(function () {
+        clearTimeout(t2);
+      }, 250);
+
+      /*
+      Breakdown: 
+      t1 after 100ms
+      + Callback is put in queue task then log "A" and keep putting another
+      callback to log B after 0ms
+      
+      t2 after 200ms
+      + Callback is put in queue task then log "C" and keep putting another
+      callback to log D after 0ms
+
+      clearTimout(t1)
+      + t1 is canncel before callback process after 100ms. Thereforem callback of t1
+      will not process
+      + Result: "A" and "B" is not logged
+
+      clearTimout(t2) after 250ms
+      + t2 is canncel after 250s but becasue in 200ms, the callback of t2 is processed, so
+      the "C" and "D" still logged
+
+      Final Call Stack: 
+      C -> D
+      */
+    </script>
+  </body>
+</html>

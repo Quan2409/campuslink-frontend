@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-A.M.A601 Problem 04</title>
+  </head>
+  <body>
+    <!--  -->
+    <script>
+      function ajax(url, cb) {
+        // fake ajax response:
+        cb({
+          foo: 2,
+          baz: [6, 8, 10],
+          bam: {
+            qux: 12,
+          },
+        });
+      }
+
+      function check(data) {
+        console.log(
+          56 ===
+            data.foo +
+              data.bar +
+              data.baz[0] +
+              data.baz[1] +
+              data.baz[2] +
+              data.bam.qux +
+              data.bam.qam
+        );
+      }
+
+      var defaults = {
+        foo: 0,
+        bar: 4,
+        bam: {
+          qux: 0,
+          qam: 14,
+        },
+      };
+
+      // YOUR CODE HERE
+      function response({ foo, baz, bam: { qux } }) {
+        const data = {
+          foo,
+          bar: defaults.bar,
+          baz,
+          bam: {
+            qux,
+            qam: defaults.bam.qam,
+          },
+        };
+        check(data); // true
+      }
+
+      // DO NOT MODIFY
+      ajax("http://fun.tld", response);
+    </script>
+  </body>
+</html>

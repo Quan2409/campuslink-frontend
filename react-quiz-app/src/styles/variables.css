@@ -1,0 +1,25 @@
+:root {
+  --app-background: #a5b4fc;
+  --white-background: #fff;
+  --green-background: #11ba82;
+  --red-background: #f04343;
+  --blue-background: #312e81;
+  --start-btn: #6fe8b8;
+  --start-btn-hover: #11ba82;
+  --next-btn: #6fe8b8;
+  --next-btn-hover: #11ba82;
+  --next-btn-disable: #e4e6eb;
+  --pre-btn: #6b7280;
+  --pre-btn-hover: #e4e6eb;
+  --submit-btn: #f59e0b;
+  --submit-btn-hover: #fabd23;
+  --tryagain-btn: #6fe8b8;
+  --tryagain-btn-hover: #11ba82;
+  --review-btn: #f04343;
+  --white-text: #fff;
+  --black-text: #000;
+  --blue-text: #4f47e6;
+  --disable-text: #d5ddeb;
+  --red-text: #f04343;
+  --border-color: #6b7280;
+}

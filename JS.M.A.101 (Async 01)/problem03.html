@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS.M.A101 Problem 03</title>
+  </head>
+  <body>
+    <!--  -->
+    <script>
+      (function () {
+        console.log(1);
+
+        setTimeout(function () {
+          console.log(2);
+        }, 1000);
+
+        setTimeout(function () {
+          console.log(3);
+        }, 0);
+
+        console.log(4);
+      })();
+
+      /*
+      Breakdown: 
+       
+      Call Stack in the first time: 
+      + Run all synchoronous task
+      + Log value "1" and "4"
+
+      Sau 0ms (second setTimeout())
+      + Callback is put in queue task
+      + Log value "3"
+
+      Sau 1s (first setTimeout())
+      + Callback is put in queue task
+      + Log value "2"
+
+      Final Call Stack: 
+      1 -> 4 -> 3 -> 2
+      */
+    </script>
+  </body>
+</html>

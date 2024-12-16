@@ -1,0 +1,51 @@
+.user-page {
+  margin-top: 10px;
+}
+
+.user-page__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.user-page__table th {
+  padding: 12px;
+  border-bottom: 1px solid #000;
+}
+
+.user-page__table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.user-page__table tbody td {
+  padding: 12px;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  font-size: 0.9rem;
+}
+
+.user-page__table tbody tr:hover {
+  background-color: #d8d7d7;
+}
+
+.user-page__table tbody td:nth-child(2) {
+  width: 200px;
+}
+
+.user-page__table tbody td:nth-child(3) {
+  width: 170px;
+}
+
+.user-page__table tbody td:nth-child(4) {
+  width: 200px;
+}
+
+.user-page__table tbody td:nth-child(5) {
+  width: 200px;
+}
+
+.user-page__table tbody td:nth-child(8) {
+  width: 200px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-A.M.A601 Problem 02</title>
+  </head>
+  <body>
+    <!--  -->
+    <script>
+      var x = 2;
+      fns = [];
+
+      (function () {
+        var localX = 5; // Renamed to avoid confusion with global x
+        for (var i = 0; i < localX; i++) {
+          // Store functions in `fns` that return `i`
+          fns.push(
+            (function (j) {
+              return function () {
+                return j;
+              };
+            })(i)
+          );
+        }
+      })();
+
+      console.log(x * 2 === fns[x * 2]()); // true
+    </script>
+  </body>
+</html>

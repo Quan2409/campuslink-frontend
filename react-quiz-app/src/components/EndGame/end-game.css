@@ -1,0 +1,36 @@
+.end-game__title {
+  margin-top: 60px;
+  text-align: center;
+  font-weight: 400;
+  color: var(--white-text);
+}
+
+.end-game__score {
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.end-game__actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn--tryagain {
+  background-color: var(--tryagain-btn);
+}
+
+.btn--tryagain:hover {
+  color: var(--white-text);
+  background-color: var(--tryagain-btn-hover);
+}
+
+.btn--review {
+  color: var(--white-text);
+  background-color: var(--review-btn);
+}
+
+.btn--review:hover {
+  opacity: 0.5;
+}

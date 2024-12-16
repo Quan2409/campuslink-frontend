@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS.M.A101 Problem 05</title>
+  </head>
+  <body>
+    <!--  -->
+    <script>
+      // Case 01:
+      function logA() {
+        console.log("A");
+      }
+
+      function logB() {
+        console.log("B");
+      }
+
+      function logC() {
+        console.log("C");
+      }
+
+      function logD() {
+        console.log("D");
+      }
+      logD(logA(logB(logC())));
+
+      /*
+      Breakdown:
+      - LogC is process first
+      - Then, result of C become an parameter of logB()
+      - Continue, result of logB is assigned in logA()
+      - Finally, result of logA is assigned in LogD()
+
+      Even though logD is called wrapping the entire expression,
+      the inner function logC() always executes first due to the "Inside-Out" rule in nested function calls.
+
+      Functions do not return a value so the result does not affect the program logic, only the log order.
+      */
+
+      // Case 02
+      function alogA() {
+        setTimeout(function () {
+          console.log("A");
+        }, 0);
+      }
+
+      function alogB() {
+        setTimeout(function () {
+          console.log("B");
+        }, 0);
+      }
+
+      function alogC() {
+        setTimeout(function () {
+          console.log("C");
+        }, 0);
+      }
+
+      function alogD() {
+        setTimeout(function () {
+          console.log("D");
+        }, 0);
+      }
+
+      alogD(alogA(alogB(alogC)));
+
+      /*
+      Breakdown:
+      Inside all functions contain a setTimeout() so, all of them is put in
+      asynchoronouse task to process then put them in queue task
+
+      Although setTimout() has 0ms delay, they sill need to wait until call stack is empty
+
+      Becasue all of setTimout is put in the same time, so they will be exceuted in order:
+      + "C" present for alogC
+      + "B" present for alogB
+      + "A" present for alogA
+      + "D" presnet for alogD
+
+      => Final output: C -> B -> A -> D
+      */
+
+      // Case 03:
+      setTimeout(function () {
+        console.log("A");
+        setTimeout(function () {
+          console.log("B");
+          setTimeout(function () {
+            console.log("C");
+            setTimeout(function () {
+              console.log("D");
+            }, 0);
+          }, 100);
+        }, 200);
+      }, 300);
+      /*
+      Breakdown: 
+      After 300ms: 
+      - first setTimeout() is executed and log "A"
+      - Begin to execute second setTimout() after 200ms to log "B"
+      
+      After 200ms
+      - second setTimeout() is executed and log "B"
+      - Begin to execute third setTimout() after 100ms to log "C"
+
+      After 100ms
+      - third setTimeout() is executed and log "C"
+      - Begin to execute four setTimout() after 0ms to log "D"
+
+      After 0ms
+      - four setTimput() is executed and log "D"
+
+      Final Call Stack: A -> B -> C -> D
+      */
+
+      // Case 04:
+      setTimeout(function () {
+        console.log("A");
+        setTimeout(function () {
+          console.log("B");
+        }, 100);
+      }, 200);
+
+      setTimeout(function () {
+        console.log("C");
+        setTimeout(function () {
+          console.log("D");
+        }, 200);
+      }, 100);
+
+      /*
+      After 100ms
+      - second setTimeout() log "C"
+      - prepare setTimeout() with 200ms delay to log "D"
+      
+      After 200ms
+      - first setTimeout() log "A"
+      - prepare setTimeout() with 100ms delay to log "B"
+
+      After 300ms (total)
+      - first setTimout() log "B" after 100ms over from "A"
+      - second setTimout() log "D" after 200ms overe from "C"
+
+      Final call stack: C -> A -> b -> D
+      */
+    </script>
+  </body>
+</html>
